@@ -1,31 +1,66 @@
+<body>
+    <div class="container">
+        <!-- Tela de Login -->
+        <div class="login-screen">
+            <input type="password" id="password" placeholder="DIGITE A SENHA">
+            <button id="submit-password">Submit</button>
+        </div>
+
+        
+    
+    <script>
+        const passwordInput = document.getElementById('password');
+        const submitButton = document.getElementById('submit-password');
+        const loginScreen = document.querySelector('.login-screen');
+        const envelopeWrapper = document.querySelector('.envelope-wrapper');
+        const correctPassword = 'incrivel, leal, protetor, porto seguro, divertido'; // Troque por sua senha aqui
+
+        submitButton.addEventListener('click', () => {
+            const enteredPassword = passwordInput.value;
+            if (enteredPassword === correctPassword) {
+                loginScreen.style.display = 'none';
+                envelopeWrapper.style.display = 'block';
+            } else {
+                alert('SENHA INCORRETA!');
+            }
+        });
+    </script>
+</body>
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body
-    <header>
-        <h1></title>
-        <link rel="stylesheet" href="Styles.css">
-        </head>
-        <body>
-        </body>
-              <header>  
-                <h1>VOCÊ É LINDA!</h1>
-    <header>
-    <main>
- <section id="mensagem">
-    <h2></h2>
-    <p></p>
-    <p></p>
-    <p><br></p>
- </section>
-    </main>
-    <footer>
-        <p></p>
-    </footer>
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>para o meu amor.</strong>
+                        <p>
+                            Espero que você tenha gostado, saiba que eu te amo muito, você é o meu mundo
+                            a minha princesa, eu te amo, e sempre vou te amar.
+                            você é a pessoa mais incrivel desse mundo inteiro, eu sempre vou cuidar de você.
+                            eu te amo muito, minha princesa, muito mesmo.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
 </body>
 </html>
-
-
