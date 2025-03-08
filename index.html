@@ -1,66 +1,49 @@
-<body>
-    <div class="container">
-        <!-- Tela de Login -->
-        <div class="login-screen">
-            <input type="password" id="password" placeholder="DIGITE A SENHA">
-            <button id="submit-password">Submit</button>
-        </div>
-
-        
-    
-    <script>
-        const passwordInput = document.getElementById('password');
-        const submitButton = document.getElementById('submit-password');
-        const loginScreen = document.querySelector('.login-screen');
-        const envelopeWrapper = document.querySelector('.envelope-wrapper');
-        const correctPassword = 'incrivel, leal, protetor, porto seguro, divertido'; // Troque por sua senha aqui
-
-        submitButton.addEventListener('click', () => {
-            const enteredPassword = passwordInput.value;
-            if (enteredPassword === correctPassword) {
-                loginScreen.style.display = 'none';
-                envelopeWrapper.style.display = 'block';
-            } else {
-                alert('SENHA INCORRETA!');
-            }
-        });
-    </script>
-</body>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Envelope + Letter (Open/Close on Click)</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Feliz dia das mulheres</title>
+    <link rel="shortcut icon" href="imagens/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="envelope-wrapper">
-            <div class="envelope">
-                <div class="letter">
-                    <div class="text">
-                        <strong>para o meu amor.</strong>
-                        <p>
-                            Espero que você tenha gostado, saiba que eu te amo muito, você é o meu mundo
-                            a minha princesa, eu te amo, e sempre vou te amar.
-                            você é a pessoa mais incrivel desse mundo inteiro, eu sempre vou cuidar de você.
-                            eu te amo muito, minha princesa, muito mesmo.
+    <style>
+        button{
+            padding: 17px 40px;
+            border-radius: 60pc;
+            background-color: rgb(248, 244, 248);
+            box-shadow: rgb(245, 4, 4);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-size: 15px;
+            transition: all.5s ease;
+        }
+        button:hover{
+            letter-spacing: 3px;
+            background-color: rgb(97, 2, 89);
+            color:#fdfcff;
+            box-shadow: rgb(7, 7, 7) 0px 7px 29px 0px;
 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="heart"></div>
-        </div>
-    </div>
-    <script>
-        const envelope = document.querySelector('.envelope-wrapper');
-        envelope.addEventListener('click', () => {
-            envelope.classList.toggle('flap');
-        });
-    </script>
+        }
+
+        button:active{
+            letter-spacing: 3px;
+            background-color: red;
+            box-shadow: rgb(250, 248, 249) 0px 8px 0px;
+            transform: translate(10px);
+            transition: 100ms;
+
+        }
+        
+        
+    </style>
+
+        <div class="heart"></div>
+        
+        <a href="amor.html" target="_self" _><button>Clique</a></button></a>
+    
+    
 </body>
 </html>
